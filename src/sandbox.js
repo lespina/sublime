@@ -29,7 +29,10 @@ class SandBox {
     this.stats = new Stats();
     this.stats.setMode(0);
     const counter = document.getElementById('counter');
-    document.getElementById('stats-panel').insertBefore(this.stats.domElement, counter);
+    const statsPanel = document.getElementById('stats-panel');
+    statsPanel.insertBefore(this.stats.domElement, counter);
+    const innerDiv = statsPanel.querySelector(':scope > div');
+    innerDiv.removeAttribute('style');
   }
 
   getRelativePos(e) {
