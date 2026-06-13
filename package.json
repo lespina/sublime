@@ -1,12 +1,23 @@
 {
+  "scripts": {
+    "builddev": "npm run dev && mv ./dist/dev.bundle.js ./bundle.js",
+    "buildprod": "npm run prod && mv ./dist/main.bundle.js ./bundle.js",
+    "dev": "webpack --config webpack.dev.js",
+    "prod": "webpack --config webpack.prod.js"
+  },
   "dependencies": {
+    "html-webpack-plugin": "^5.6.7",
     "line-intersection": "^1.0.9",
     "lodash": "^4.18.1",
     "shuffle-array": "^1.0.1",
     "stats-js": "^1.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "babel-loader": "^10.1.1",
     "webpack": "^5.107.2",
-    "webpack-cli": "^7.0.3"
+    "webpack-cli": "^7.0.3",
+    "webpack-merge": "^6.0.1"
   }
 }
