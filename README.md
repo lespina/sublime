@@ -124,6 +124,5 @@ Sublime is fully responsive with breakpoints ranging from screen-widths of 1100p
 
 ![Responsive](css/responsive.gif)
 
-### Future Directions
-* I am planning to build a game using the public API of this physics engine, stay tuned!
-* I may go back and refactor the collision resolution algorithm to employ a discrete verlet scheme for more accurate behavior and enforcement of rigidity.
+### Running Locally
+To run a local build simply use the package.json script `npm run builddev` and open up `./index.html` in your web browser.  If making changes in javascript, run `npm run buildprod` and commit the resulting `bundle.js` file before pushing new commits.
